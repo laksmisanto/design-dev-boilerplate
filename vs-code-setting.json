@@ -1,0 +1,73 @@
+{
+  // ---------------------------------------
+  // Editor & UI
+  // ---------------------------------------
+  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.wordWrap": "on",
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Default Dark Modern",
+
+  // ---------------------------------------
+  // Formatting (Prettier)
+  // ---------------------------------------
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": false,
+
+  // ---------------------------------------
+  // JavaScript / TypeScript
+  // ---------------------------------------
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // ---------------------------------------
+  // Emmet (For HTML, CSS, React)
+  // ---------------------------------------
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+
+  // ---------------------------------------
+  // HTML/CSS Productivity
+  // ---------------------------------------
+  "css.colorDecorators.enable": true,
+  "html.autoClosingTags": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+
+  // ---------------------------------------
+  // Tailwind CSS
+  // ---------------------------------------
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  // ---------------------------------------
+  // Files & Workspace
+  // ---------------------------------------
+  "files.autoSave": "off",
+  "files.associations": {
+    "*.css": "css",
+    "*.html": "html",
+    "*.js": "javascript",
+    "*.jsx": "javascriptreact"
+  },
+
+  // ---------------------------------------
+  // Terminal
+  // ---------------------------------------
+  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.smoothScrolling": true
+}

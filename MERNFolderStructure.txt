@@ -1,0 +1,101 @@
+project-root/
+│
+├─ client/                          # React Front-end
+│   ├─ public/
+│   │   └─ index.html
+│   │
+│   ├─ src/
+│   │   ├─ components/
+│   │   │   ├─ ui/
+│   │   │   ├─ layout/
+│   │   │   └─ shared/
+│   │   │
+│   │   ├─ pages/
+│   │   │   ├─ Home/
+│   │   │   ├─ Login/
+│   │   │   ├─ Register/
+│   │   │   ├─ Dashboard/
+│   │   │   └─ NotFound.jsx
+│   │   │
+│   │   ├─ features/                # Feature-based modules
+│   │   │   ├─ auth/
+│   │   │   ├─ users/
+│   │   │   └─ products/
+│   │   │
+│   │   ├─ context/
+│   │   │   ├─ AuthContext.jsx
+│   │   │   └─ ThemeContext.jsx
+│   │   │
+│   │   ├─ hooks/
+│   │   │   ├─ useAuth.js
+│   │   │   └─ useFetch.js
+│   │   │
+│   │   ├─ services/
+│   │   │   └─ axios.js
+│   │   │
+│   │   ├─ routes/
+│   │   │   └─ AppRoutes.jsx
+│   │   │
+│   │   ├─ assets/
+│   │   │   ├─ images/
+│   │   │   ├─ icons/
+│   │   │   └─ fonts/
+│   │   │
+│   │   ├─ styles/
+│   │   │   ├─ global.css
+│   │   │   └─ variables.css
+│   │   │
+│   │   ├─ utils/
+│   │   │   ├─ validators.js
+│   │   │   └─ helpers.js
+│   │   │
+│   │   ├─ App.jsx
+│   │   └─ main.jsx
+│   │
+│   ├─ .env
+│   └─ package.json
+│
+│
+├─ server/                          # Node + Express Back-end
+│   ├─ src/
+│   │   ├─ config/
+│   │   │   ├─ db.js               # MongoDB connection
+│   │   │   └─ dotenv.js
+│   │   │
+│   │   ├─ models/
+│   │   │   ├─ User.model.js
+│   │   │   └─ Product.model.js
+│   │   │
+│   │   ├─ controllers/
+│   │   │   ├─ auth.controller.js
+│   │   │   └─ user.controller.js
+│   │   │
+│   │   ├─ routes/
+│   │   │   ├─ auth.routes.js
+│   │   │   ├─ user.routes.js
+│   │   │   └─ product.routes.js
+│   │   │
+│   │   ├─ middleware/
+│   │   │   ├─ authMiddleware.js
+│   │   │   └─ errorHandler.js
+│   │   │
+│   │   ├─ utils/
+│   │   │   ├─ createToken.js
+│   │   │   └─ sendEmail.js
+│   │   │
+│   │   ├─ services/
+│   │   │   └─ user.service.js
+│   │   │
+│   │   ├─ validators/
+│   │   │   └─ auth.validator.js
+│   │   │
+│   │   ├─ app.js                  # Express app
+│   │   └─ server.js               # Server start file
+│   │
+│   ├─ .env
+│   └─ package.json
+│
+│
+├─ .gitignore
+├─ README.md
+└─ package.json                     # Root workspace file

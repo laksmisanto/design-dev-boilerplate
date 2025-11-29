@@ -1,0 +1,95 @@
+project-root/
+│
+├─ public/                        # Static assets served by React
+│   ├─ favicon.ico
+│   └─ logo.png
+│
+├─ src/
+│   ├─ components/                # Reusable components (UI + widgets)
+│   │   ├─ ui/                    # Component library
+│   │   │   ├─ Button.jsx
+│   │   │   ├─ Input.jsx
+│   │   │   ├─ Modal.jsx
+│   │   │   ├─ Card.jsx
+│   │   │   └─ index.js
+│   │   ├─ layout/                # Navbar, Sidebar, Footer, Layouts
+│   │   │   ├─ Navbar.jsx
+│   │   │   ├─ Sidebar.jsx
+│   │   │   └─ Footer.jsx
+│   │   ├─ shared/                # Small widgets
+│   │   │   ├─ Loader.jsx
+│   │   │   ├─ Alert.jsx
+│   │   │   └─ Badge.jsx
+│   │   └─ forms/                 # Form components
+│   │       ├─ TextField.jsx
+│   │       └─ FormGroup.jsx
+│   │
+│   ├─ pages/                     # Main pages (route-level components)
+│   │   ├─ Home/
+│   │   │   └─ Home.jsx
+│   │   ├─ Login/
+│   │   │   └─ Login.jsx
+│   │   ├─ Register/
+│   │   │   └─ Register.jsx
+│   │   ├─ Dashboard/
+│   │   │   ├─ Dashboard.jsx
+│   │   │   └─ Profile.jsx
+│   │   └─ NotFound.jsx
+│   │
+│   ├─ features/                  # Feature modules (mini-apps)
+│   │   ├─ auth/
+│   │   │   ├─ api.js             # Login/register API calls
+│   │   │   ├─ AuthSlice.js       # Redux/Zustand slice
+│   │   │   ├─ hooks.js           # useAuth, useLogin
+│   │   │   └─ utils.js
+│   │   ├─ products/
+│   │   │   ├─ api.js
+│   │   │   ├─ ProductList.jsx
+│   │   │   └─ ProductCard.jsx
+│   │   └─ users/
+│   │       ├─ api.js
+│   │       └─ UserList.jsx
+│   │
+│   ├─ services/                  # External services
+│   │   ├─ axios.js               # Axios base instance
+│   │   └─ firebase.js            # Firebase config (optional)
+│   │
+│   ├─ hooks/                     # Global custom hooks
+│   │   ├─ useAuth.js
+│   │   ├─ useFetch.js
+│   │   ├─ useDebounce.js
+│   │   └─ useLocalStorage.js
+│   │
+│   ├─ context/                   # React context providers
+│   │   ├─ AuthContext.jsx
+│   │   └─ ThemeContext.jsx
+│   │
+│   ├─ store/                     # Redux / Zustand store
+│   │   ├─ store.js
+│   │   └─ rootReducer.js
+│   │
+│   ├─ utils/                     # Helpers + utilities
+│   │   ├─ validators.js          # Yup / Zod validators
+│   │   ├─ date.js                # Format dates
+│   │   └─ helpers.js             # Random helper functions
+│   │
+│   ├─ routes/                    # Routing config
+│   │   └─ AppRoutes.jsx
+│   │
+│   ├─ assets/                    # Images, icons, fonts
+│   │   ├─ images/
+│   │   ├─ icons/
+│   │   └─ fonts/
+│   │
+│   ├─ styles/                    # Global styles
+│   │   ├─ global.css
+│   │   ├─ variables.css
+│   │   └─ theme.css
+│   │
+│   ├─ App.jsx                    # Main App component
+│   ├─ main.jsx                   # Entry point (Vite) or index.js (CRA)
+│   └─ index.html                 # Vite HTML template (if using Vite)
+│
+├─ .env                           # Environment variables
+├─ package.json
+└─ vite.config.js                 # If using Vite

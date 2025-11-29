@@ -1,0 +1,77 @@
+project-root/
+│
+├─ public/                          # Public static files (images, icons, fonts)
+│   └─ favicon.ico
+│
+├─ src/
+│   ├─ app/                         # Next.js App Router (frontend + backend API)
+│   │   ├─ (public)/                # Public pages (no login required)
+│   │   │   ├─ page.jsx             # Home page
+│   │   │   ├─ login/
+│   │   │   │   └─ page.jsx         # Login screen
+│   │   │   ├─ register/
+│   │   │   │   └─ page.jsx         # Register screen
+│   │   │   └─ forgot-password/
+│   │   │       └─ page.jsx
+│   │   │
+│   │   ├─ (dashboard)/             # Protected authenticated pages
+│   │   │   ├─ layout.jsx           # Dashboard layout (sidebar/topbar)
+│   │   │   └─ page.jsx             # Dashboard main page
+│   │   │
+│   │   ├─ api/                     # Backend API routes (server functions)
+│   │   │   ├─ auth/
+│   │   │   │   ├─ login/route.js   # POST login
+│   │   │   │   ├─ register/route.js# POST register
+│   │   │   │   └─ logout/route.js  # POST logout
+│   │   │   ├─ user/
+│   │   │   │   └─ route.js         # GET/PUT user data
+│   │   │   └─ products/
+│   │   │       └─ route.js         # Example CRUD API
+│   │   │
+│   │   └─ layout.jsx               # Root layout (global UI wrapper)
+│
+│   ├─ components/                  # All reusable UI and layout components
+│   │   ├─ ui/                      # Component library (buttons, inputs, modals)
+│   │   │   ├─ button.jsx
+│   │   │   ├─ input.jsx
+│   │   │   ├─ modal.jsx
+│   │   │   └─ index.js             # Export all UI components
+│   │   │
+│   │   ├─ layout/                  # Layout components
+│   │   │   ├─ Sidebar.jsx
+│   │   │   ├─ Navbar.jsx
+│   │   │   └─ Footer.jsx
+│   │   │
+│   │   └─ shared/                  # Shared widgets
+│   │       ├─ Loader.jsx
+│   │       └─ Alert.jsx
+│   │
+│   ├─ lib/                         # Utility functions, config, and helpers
+│   │   ├─ db.js                    # DB connection (MongoDB / Prisma)
+│   │   ├─ auth.js                  # JWT/Cookie authentication helpers
+│   │   ├─ validators.js            # Zod/Yup validation schemas
+│   │   └─ api-client.js            # Client fetch wrapper
+│   │
+│   ├─ hooks/                       # Custom React hooks
+│   │   ├─ useAuth.js
+│   │   ├─ useDebounce.js
+│   │   └─ useFetch.js
+│   │
+│   ├─ context/                     # React Context Providers
+│   │   ├─ AuthProvider.jsx
+│   │   └─ ThemeProvider.jsx
+│   │
+│   ├─ styles/
+│   │   ├─ globals.css              # Global styles
+│   │   ├─ variables.css            # CSS variables
+│   │   └─ animations.css           # Animations
+│   │
+│   └─ data/                        # Static or mock data
+│       └─ example.json
+│
+├─ middleware.js                    # Route protection (auth middleware)
+│
+├─ .env.local                       # Environment variables
+├─ next.config.js                   # Next.js config
+├─ package.json
+└─ tailwind.config.js               # Tailwind CSS config

@@ -1,5 +1,133 @@
 @import "tailwindcss";
 
+@theme inline {
+  /* BRAND COLORS */
+  --primary: var(--primary);
+  --primary-light: var(--primary-light);
+  --primary-dark: var(--primary-dark);
+  --secondary: var(--secondary);
+  --secondary-light: var(--secondary-light);
+  --secondary-dark: var(--secondary-dark);
+  --accent: var(--accent);
+  --accent-light: var(--accent-light);
+  --accent-dark: var(--accent-dark);
+
+  /* NEUTRALS */
+  --color-background: var(--background);
+  --background: var(--background);
+  --surface: var(--surface);
+  --surface-alt: var(--surface-alt);
+  --surface-muted: var(--surface-muted);
+  --surface-overlay: var(--surface-overlay); /* ADDED */
+
+  --color-foreground: var(--foreground);
+  --foreground: var(--foreground);
+  --text-primary: var(--text-primary);
+  --text-secondary: var(--text-secondary);
+  --text-muted: var(--text-muted);
+  --text-inverse: var(--text-inverse);
+
+  /* INTERACTION & STATE (NEW) */
+  --active: var(--active);
+  --disabled-bg: var(--disabled-bg);
+  --disabled-text: var(--disabled-text);
+  --opacity-disabled: var(--opacity-disabled);
+  --transition-speed: var(--transition-speed);
+  --transition-easing: var(--transition-easing);
+
+  /* BORDERS / LINES */
+  --border: var(--border);
+  --border-strong: var(--border-strong);
+  --divider: var(--divider);
+  --border-focus: var(--border-focus); /* ADDED */
+
+  /* FEEDBACK COLORS */
+  --success: var(--success);
+  --success-bg: var(--success-bg);
+  --warning: var(--warning);
+  --warning-bg: var(--warning-bg);
+  --error: var(--error);
+  --error-bg: var(--error-bg);
+  --info: var(--info);
+  --info-bg: var(--info-bg);
+
+  /* TABLE COLORS */
+  --t-header-bg: var(--t-header-bg);
+  --t-row-bg: var(--t-row-bg);
+  --t-row-alt-bg: var(--t-row-alt-bg);
+  --t-row-hover: var(--t-row-hover);
+  --t-text: var(--t-text);
+  --t-border: var(--t-border);
+
+  /* FORM COLORS */
+  --input-bg: var(--input-bg);
+  --input-border: var(--input-border);
+  --input-focus: var(--input-focus);
+  --input-placeholder: var(--input-placeholder);
+
+  /* BUTTON COLORS */
+  --btn-primary-bg: var(--btn-primary-bg);
+  --btn-primary-hover: var(--btn-primary-hover);
+  --btn-primary-text: var(--btn-primary-text);
+  --btn-secondary-bg: var(--btn-secondary-bg);
+  --btn-secondary-hover: var(--btn-secondary-hover);
+  --btn-secondary-text: var(--btn-secondary-text);
+  --btn-muted-bg: var(--btn-muted-bg);
+  --btn-muted-hover: var(--btn-muted-hover);
+  --btn-muted-text: var(--btn-muted-text);
+
+  /* SPACING SCALE (8px grid) */
+  --space-1: var(--space-1);
+  --space-2: var(--space-2);
+  --space-3: var(--space-3);
+  --space-4: var(--space-4);
+  --space-5: var(--space-5);
+  --space-6: var(--space-6);
+  --space-8: var(--space-8);
+  --space-10: var(--space-10);
+  --space-12: var(--space-12);
+  --space-16: var(--space-16);
+  --space-20: var(--space-20);
+
+  /* RADIUS */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-full: var(--radius-full);
+
+  /* SHADOWS */
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+
+  /* Z-INDEX SYSTEM */
+  --z-dropdown: var(--z-dropdown);
+  --z-sticky: var(--z-sticky);
+  --z-modal: var(--z-modal);
+  --z-toast: var(--z-toast);
+
+  /* TYPOGRAPHY */
+  --font-sans: var(--font-primary);
+  --font-mono: var(--font-secondary);
+  --font-primary: var(--font-primary);
+  --font-secondary: var(--font-secondary);
+  --font-weight-regular: var(--font-weight-regular); /* ADDED */
+  --font-weight-bold: var(--font-weight-bold); /* ADDED */
+  --line-height-body: var(--line-height-body); /* ADDED */
+  --line-height-heading: var(--line-height-heading); /* ADDED */
+  --text-xs: var(--text-xs);
+  --text-sm: var(--text-sm);
+  --text-base: var(--text-base);
+  --text-lg: var(--text-lg);
+  --text-xl: var(--text-xl);
+  --text-2xl: var(--text-2xl);
+  --text-3xl: var(--text-3xl);
+  --text-4xl: var(--text-4xl);
+  --text-5xl: var(--text-5xl);
+}
+
 /* ============================================================
    GLOBAL DESIGN SYSTEM — LIGHT MODE
    ============================================================ */
@@ -22,6 +150,7 @@
   --surface: #ffffff;
   --surface-alt: #f0f4f8;
   --surface-muted: #e5e9ef;
+  --surface-overlay: #fdfdfe; /* ADDED: Slightly lighter surface for overlays */
 
   --foreground: #0f172a;
   --text-primary: #1e293b;
@@ -29,21 +158,27 @@
   --text-muted: #94a3b8;
   --text-inverse: #ffffff;
 
+  /* INTERACTION & STATE (NEW) */
+  --active: var(--primary); /* ADDED: Use primary color */
+  --disabled-bg: var(--surface-muted); /* ADDED */
+  --disabled-text: var(--text-muted); /* ADDED */
+  --opacity-disabled: 0.5; /* ADDED */
+  --transition-speed: 0.2s; /* ADDED */
+  --transition-easing: ease-in-out; /* ADDED */
+
   /* BORDERS / LINES */
   --border: #cbd5e1;
   --border-strong: #94a3b8;
   --divider: #e2e8f0;
+  --border-focus: var(--primary); /* ADDED */
 
   /* FEEDBACK COLORS */
   --success: #22c55e;
   --success-bg: #dcfce7;
-
   --warning: #fbbf24;
   --warning-bg: #fef3c7;
-
   --error: #ef4444;
   --error-bg: #fee2e2;
-
   --info: #3b82f6;
   --info-bg: #dbeafe;
 
@@ -65,11 +200,9 @@
   --btn-primary-bg: var(--primary);
   --btn-primary-hover: var(--primary-dark);
   --btn-primary-text: #ffffff;
-
   --btn-secondary-bg: var(--secondary);
   --btn-secondary-hover: var(--secondary-dark);
   --btn-secondary-text: #ffffff;
-
   --btn-muted-bg: #e2e8f0;
   --btn-muted-hover: #cbd5e1;
   --btn-muted-text: #1e293b;
@@ -96,9 +229,9 @@
 
   /* SHADOWS */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.15);
-  --shadow-xl: 0 20px 30px rgba(0,0,0,0.2);
+  --shadow-md: 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 10px 15px rgba(0,0,0,0.15);
+  --shadow-xl: 20px 30px rgba(0,0,0,0.2);
 
   /* Z-INDEX SYSTEM */
   --z-dropdown: 1000;
@@ -109,7 +242,10 @@
   /* TYPOGRAPHY */
   --font-primary: "Roboto", sans-serif;
   --font-secondary: "Inter", sans-serif;
-
+  --font-weight-regular: 400; /* ADDED */
+  --font-weight-bold: 700; /* ADDED */
+  --line-height-body: 1.6; /* ADDED */
+  --line-height-heading: 1.2; /* ADDED */
   --text-xs: 12px;
   --text-sm: 14px;
   --text-base: 16px;
@@ -130,6 +266,7 @@
     --surface: #1e293b;
     --surface-alt: #162032;
     --surface-muted: #0c1524;
+    --surface-overlay: #111827; /* ADDED: Slightly darker surface for overlays */
 
     --foreground: #f1f5f9;
 
@@ -137,6 +274,12 @@
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
     --text-inverse: #0f172a;
+
+    /* INTERACTION & STATE (UPDATED FOR DARK MODE) */
+    --active: var(--primary-light); /* ADDED: Use light primary for contrast */
+    --disabled-bg: #334155; /* ADDED: Darker background */
+    --disabled-text: #64748b; /* ADDED: Muted text */
+    --border-focus: var(--primary-light); /* ADDED */
 
     --border: #334155;
     --border-strong: #475569;
